@@ -1,0 +1,16 @@
+# Сборка CMake
+build/
+cmake-build-debug/
+cmake-build-release/
+
+# Исполняемые файлы
+*.exe
+*.out
+*.app
+
+# Папки сред разработки (IDE)
+.idea/
+.vscode/
+*.sln
+*.vcxproj
+*.user
