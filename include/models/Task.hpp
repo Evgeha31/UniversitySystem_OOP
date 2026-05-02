@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 
-
 class Task {
 private:
     std::string title;
@@ -11,6 +10,8 @@ public:
     Task(std::string t, int max);
     virtual ~Task() {}
     virtual void printInfo() const = 0;
+
+    virtual bool isFinal() const { return false; }
 
     std::string getTitle() const {return title; }
     int getMaxScore() const {return maxScore; }
@@ -30,6 +31,8 @@ private:
 public:
     Exam(std::string t, int max, std::string date);
     void printInfo() const override;
+    
+    bool isFinal() const override { return true; }
 };
 
 class Credit : public Task {
@@ -38,8 +41,9 @@ private:
 public:
     Credit(std::string t, int max, bool isDiff);
     void printInfo() const override;
+    
+    bool isFinal() const override { return true; }
 };
-
 
 class RGZ : public Task {
 private:
@@ -49,11 +53,12 @@ public:
     void printInfo() const override;
 };
 
-
 class CourseProject : public Task {
 private:
     std::string advisorName; 
 public:
     CourseProject(std::string t, int max, std::string advisor);
     void printInfo() const override;
+    
+    bool isFinal() const override { return true; }
 };
