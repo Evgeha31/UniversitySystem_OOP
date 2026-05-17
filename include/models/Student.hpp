@@ -16,5 +16,7 @@ public:
     Student(int id, std::string name, std::string login, std::string pass, std::string rbNum, StudyGroup* grp);
 
     void printRole() const override;
-    std::string getStatusString() const;
+    std::string getStatusString() const; 
+
+    bool isTeacher() const override { return false; }
 };

@@ -24,7 +24,7 @@ void AcademicSession::notifyObservers() {
 
 void AcademicSession::closeSession() {
     isClosed = true;
-    std::cout << "\n[СЕССИЯ] " << type << " сессия " << year << " официально ЗАКРЫТА!\n";
-    std::cout << "[СЕССИЯ] Идет автоматическое формирование приказов...\n";
+    std::cout << "\n" << type << " сессия " << year << " официально ЗАКРЫТА!\n";
+    std::cout << "Идет автоматическое формирование приказов...\n";
     notifyObservers(); 
 }

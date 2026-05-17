@@ -19,6 +19,9 @@ public:
     void addGrade(GradeRecord* record);
     double calculateAverageScore() const;
     void printGradebook() const;
-    
+    Discipline* getDiscipline() const; 
+
     const std::vector<GradeRecord*>& getRecords() const;
+    
+    void clearRecords(); 
 };
